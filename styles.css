@@ -66,11 +66,10 @@ body {
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: auto 1fr auto;
-
   }
 }
 
-header {
+.header {
   grid-column: span 3;
   padding: 30px;
   text-align: center;
@@ -79,9 +78,50 @@ header {
   color: white;
 }
 
-main {
+.byline {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.byline > .avatar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+}
+
+.byline > .byline-right {
+  position: absolute;
+  top: 0;
+  left: 60px;
+  height: 60px;
+  padding-left: 15px;
+  padding-top: 2px;
+}
+
+.byline > .byline-right > .author-name {
+  color: rgba(0,0,0,.84);
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.byline > .byline-right > .author-title, .publication-date {
+  color: rgba(0,0,0,.54);
+  font-size: 14px;
+  padding-top: 2px;
+  line-height: 18px;
+}
+
+.main {
   flex: 1;
   padding: 20px;
+}
+
+.main > .article {
+  margin-top: 35px;
 }
 
 nav {
@@ -89,18 +129,68 @@ nav {
   padding: 20px;
 }
  
-aside {
+.aside {
   padding: 20px;
   background-color: #936;
 }
 
-footer {
+.aside > .tags > li {
+  float:left;
+  margin:0;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  border:0;
+  background-color: #f2f2f2;
+  color: #5b5b5b;
+  line-height: 21px;
+  font-size: 13px;
+}
+
+.footer {
+  color: #c8c8c8;
+  background-color: #272b30;
+  border-top: 1px solid #1c1e22;
   grid-column: span 3;
-  padding: 30px;
-  text-align: center;
-  font-size: 1.4em;
-  background-color: #690;
-  color: white;
+  padding: 10px 30px;
+  font-size: 11px;
+}
+
+.footer > .copyright {
+  float: right;
+  line-height: 21px;
+  text-align: right;
+  text-size-adjust: 100%;
+}
+
+.footer > .menu {
+  line-height: 21px;
+  float: left;
+}
+
+.footer > .menu > ul {
+  list-style-type: none;
+}
+
+.footer > .menu > ul > li {
+  float:left;
+  margin:0;
+  padding:0;
+  border:0;
+}
+
+.footer > .menu > ul > li > a {
+  color: #ff7200;
+  float:left;
+  margin:0;
+  text-decoration:none;
+}
+
+.footer > .menu > ul > li:not(:last-child):after {
+    content: "|";
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 h1 {
