@@ -64,18 +64,72 @@ body {
 @media (min-width: 768px) {
   .container {
     display: grid;
-    grid-template-columns: 200px 1fr 200px;
+    grid-template-columns: 300px 1fr 300px;
     grid-template-rows: auto 1fr auto;
   }
 }
 
 .header {
   grid-column: span 3;
-  padding: 30px;
-  text-align: center;
-  font-size: 1.4em;
-  background-color: #369;
-  color: white;
+  background-color: #272b30;
+  border-bottom: 1px solid #1c1e22;
+  padding: 0 24px;
+}
+
+.header > .logo {
+  float: left;
+  height: 60px;
+  width: 120px;
+  margin-right: 24px;
+}
+
+.header > .logo > svg {
+  margin-top: 14px;
+  margin-bottom: 22px;
+  margin-right: 5px;
+  height: 24px;
+  width: 24px;
+  float: left;
+}
+
+.header > .logo > svg > path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.8);
+    stroke-width: 3px;
+}
+
+.header > .logo > p {
+  line-height: 60px;
+  font-size: 17px;
+  float: left;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+}
+
+.header > .menu {
+  line-height: 21px;
+  float: right;
+}
+
+.header > .menu {
+  list-style-type: none;
+}
+
+.header > .menu > li {
+  float:left;
+  margin:0;
+  margin-left: 24px;
+  padding:0;
+  border:0;
+}
+
+.header > .menu > li > a {
+  color: #ff7200;
+  font-size: 12px;
+  line-height: 60px;
+  text-transform: uppercase;
+  margin:0;
+  text-decoration:none;
 }
 
 .byline {
@@ -124,14 +178,31 @@ body {
   margin-top: 35px;
 }
 
-nav {
-  background-color: #f90;
-  padding: 20px;
+.navbar {
+  background-color: #313131;
+  padding: 10px 20px;
+}
+
+.navbar > ul > li {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.navbar > ul > li:hover {
+  background-color: #656565;
+  margin-left: -20px;
+  margin-right: -20px;
+  padding: 0 20px;
+}
+
+.navbar > ul > li > a {
+  color: #d9d9d9;
+  text-decoration:none;
 }
  
 .aside {
   padding: 20px;
-  background-color: #936;
+  background-color: #f2f2f2;
 }
 
 .aside > .tags > li {
@@ -142,7 +213,7 @@ nav {
   padding: 5px 10px;
   border-radius: 3px;
   border:0;
-  background-color: #f2f2f2;
+  background-color: #e2e2e2;
   color: #5b5b5b;
   line-height: 21px;
   font-size: 13px;
@@ -169,25 +240,25 @@ nav {
   float: left;
 }
 
-.footer > .menu > ul {
+.footer > .menu {
   list-style-type: none;
 }
 
-.footer > .menu > ul > li {
+.footer > .menu > li {
   float:left;
   margin:0;
   padding:0;
   border:0;
 }
 
-.footer > .menu > ul > li > a {
+.footer > .menu > li > a {
   color: #ff7200;
   float:left;
   margin:0;
   text-decoration:none;
 }
 
-.footer > .menu > ul > li:not(:last-child):after {
+.footer > .menu > li:not(:last-child):after {
     content: "|";
     margin-left: 5px;
     margin-right: 5px;
