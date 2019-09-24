@@ -16,7 +16,7 @@ I don't use it this way, obviously, but the sufficiently paranoid may want to di
 
 I've tried to make my website work without any of this. This means making sure that the DOM makes sense and is laid out sensibly, and everything uses the right kinds of tags.
 
-It's a refreshing excersize, and valuble from an a11y standpoint. Try my site without styles -- I dare you. :-)
+It's a refreshing exercise, and valuable from an a11y standpoint. Try my site without styles -- I dare you. :-)
 
 # In fact you shouldn't even have to visit the site.
 
